@@ -7,9 +7,17 @@ Multichannel filtered reference least mean square (McFxLMS) algorithms are widel
 - The McFxLMS algorithm is essential for noise cancellation in complex acoustic environments.
 Active noise control (ANC) is a mechanism used to address low-frequency noise issues based on the principle of acoustic wave superposition~\cite{dongyuan2020algorithms}. The ANC system artificially generates an anti-noise wave that has the same amplitude but the reverse phase of the noise wave, which interferes with the disturbance destructively.
 
-In general, the ANC system can be classified as feedforward structure and feedback structure. The feedforward structure implements the reference microphone and the error microphone to generate anti-noise that can dynamically match with the variation of the primary noise, which allows it to deal with many noise types. Moreover, the ANC system also can be referred to as single-channel ANC~\cite{shi2016systolic} or multichannel ANC based on the number of secondary sources used. Compared to single-channel ANC, multichannel ANC is implemented to gain a larger quiet zone through multiple secondary sources and error microphones. 
+-In general, the ANC system can be classified as feedforward structure and feedback structure. The feedforward structure implements the reference microphone and the error microphone to generate anti-noise that can dynamically match with the variation of the primary noise, which allows it to deal with many noise types. Moreover, the ANC system also can be referred to as single-channel ANC~\cite{shi2016systolic} or multichannel ANC based on the number of secondary sources used. Compared to single-channel ANC, multichannel ANC is implemented to gain a larger quiet zone through multiple secondary sources and error microphones. 
 
-The FxLMS is among the most practical adaptive algorithms proposed to compensate for the influence of the secondary path in an ANC system. Figure 1 shows the block diagram of the multichannel FxLMS algorithm, which has $J$ reference microphones, $K$ secondary sources, and $M$ error microphones. The control filter matrix is given by
+-The FxLMS is among the most practical adaptive algorithms proposed to compensate for the influence of the secondary path in an ANC system. Figure 1 shows the block diagram of the multichannel FxLMS algorithm, which has $J$ reference microphones, $K$ secondary sources, and $M$ error microphones. The control filter matrix is given by
+\begin{equation}
+    \mathbf w(n) = \begin{bmatrix}
+        \mathbf{w}_{11}^T(n) & \mathbf{w}_{12}^T(n) & \cdots & \mathbf{w}_{1J}^T(n) \\
+        \mathbf{w}_{21}^T(n) & \mathbf{w}_{22}^T(n) & \cdots & \mathbf{w}_{2J}^T(n) \\
+        \vdots & \vdots & \ddots & \vdots \\
+        \mathbf{w}_{K1}^T(n) & \mathbf{w}_{K2}^T(n) & \cdots & \mathbf{w}_{KJ}^T(n)
+    \end{bmatrix} \in \mathbb{R}^{K \times JN},
+\end{equation}
 
 - The document covers the principles and effectiveness of active noise control, emphasizing the algorithm's role.
 
