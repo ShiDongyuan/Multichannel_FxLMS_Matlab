@@ -1,4 +1,4 @@
-# User Guide of a MATLAB Program for Multichannel Filtered Reference Least Mean Square Algorithm
+# User Guide of a MATLAB Program for Multichannel Filtered Reference Least Mean Square (McFxLMS) Algorithm
 
 ## Introduction
 Multichannel filtered reference least mean square (McFxLMS) algorithms are widely utilized in adaptive multichannel active noise control (MCANC) applications. As a critical and high-computationally efficient adaptive critical algorithm, it also typically works as a benchmark for comparative studies of the new algorithms proposed by peers and researchers. However, up to now, there are few open-source codes for the FxLMS algorithm, especially for large-count channels. Therefore, this work provides a MATLAB code for the McFxLMS algorithm, which can be used for the **<font color=#FF000>arbitrary number</font>** of channels system.
@@ -7,8 +7,16 @@ Multichannel filtered reference least mean square (McFxLMS) algorithms are widel
 - The McFxLMS algorithm is essential for noise cancellation in complex acoustic environments.
 Active noise control (ANC) is a mechanism used to address low-frequency noise issues based on the principle of acoustic wave superposition. The ANC system artificially generates an anti-noise wave that has the same amplitude but the reverse phase of the noise wave, which interferes with the disturbance destructively.
 
-- In general, the ANC system can be classified as feedforward structure and feedback structure. The feedforward structure implements the reference microphone and the error microphone to generate anti-noise that can dynamically match with the variation of the primary noise, which allows it to deal with many noise types. Moreover, the ANC system also can be referred to as single-channel ANC or multichannel ANC based on the number of secondary sources used. Compared to single-channel ANC, multichannel ANC is implemented to gain a larger quiet zone through multiple secondary sources and error microphones. 
-- The document covers the principles and effectiveness of active noise control, emphasizing the algorithm's role.
+- In general, the ANC system can be classified as feedforward structure and feedback structure. The feedforward structure implements the reference microphone and the error microphone to generate anti-noise that can dynamically match with the variation of the primary noise, which allows it to deal with many noise types. Moreover, the ANC system also can be referred to as single-channel ANC or multichannel ANC based on the number of secondary sources used. Compared to single-channel ANC, multichannel ANC is implemented to gain a larger quiet zone through multiple secondary sources and error microphones.
+
+- The target multichannel active noise control (MCANC) system is assumed to have $J$ reference microphones, $K$ secondary sources, and $M$ error microphones. According to the gradient decent method, the $kj$th control filter is obtained from 
+  $$
+      \mathbf{w}_{kj}(n + 1) = \mathbf{w}_{kj}(n) + \mu \sum_{m=1}^{M} e_m(n) \mathbf{x}'_{jkm}(n),
+  $$
+  where $\mu$ and $e_m$ denote the step size and the $m$-th error signal respectively. The filtered reference signal is given by 
+  $$ x_{jkm}'(n) = \hat{s}_{mk}(n) * x_j(n).$$
+  In the equation, $\hat{s}_{mk}(n)$ represents the impulse response of the $mk$-th secondary path, and $x_j(n)$ is the reference signal picked by the $j$-th reference microphone. This Matlab Code is used to implement the above algorithm.  
+
 
 ## Code Explanation
 ### Key MATLAB Files
