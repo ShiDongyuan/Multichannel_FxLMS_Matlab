@@ -13,9 +13,10 @@ Active noise control (ANC) is a mechanism used to address low-frequency noise is
 
 $$
 \mathbf w(n) = \begin{pmatrix}
-a & b & c \\
-d & e & f \\
-g & h & i 
+\mathbf{w}_{11}^T(n) & \mathbf{w}_{12}^T(n) & \cdots & \mathbf{w}_{1J}^T(n) \\
+        \mathbf{w}_{21}^T(n) & \mathbf{w}_{22}^T(n) & \cdots & \mathbf{w}_{2J}^T(n) \\
+        \vdots & \vdots & \ddots & \vdots \\
+        \mathbf{w}_{K1}^T(n) & \mathbf{w}_{K2}^T(n) & \cdots & \mathbf{w}_{KJ}^T(n)
 \end{pmatrix} 
 $$
 
