@@ -26,6 +26,15 @@ Active noise control (ANC) is a mechanism used to address low-frequency noise is
 - `Four_MCANC.m`
 - Examples include simulations of a 4-channel collocated ANC system.
 - Instructions for setting up primary and secondary paths, generating reference and disturbance signals.
+  <code>
+  %% Multichannel FxLMS algorithm 
+  %---Wc [Filter length x Control unit/ microphone x Reference microphone number]
+  %---Sec[Filter length x Error number x Speaker number]
+  a = Multichannel_FxLMS(Wc,Sec,muW);
+  %---Red is referernce  [Reference microphone number x signal length]
+  %---Dir is Disturabnce [Error microphone number x signal length]
+  [E,a]= a.FxLMS_cannceller(Red,Dir);
+  </code>
 
 ## Conclusion
 The guide provides a detailed overview of creating and using a MATLAB program for active noise control using the McFxLMS algorithm.
