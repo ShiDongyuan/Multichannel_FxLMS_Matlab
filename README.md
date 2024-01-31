@@ -15,6 +15,7 @@ Active noise control (ANC) is a mechanism used to address low-frequency noise is
 - `Control_filter.m`: Defines a class for the control filter of the ANC system.
 - `Multichannel_FxLMS.m`: Specifies properties and functions of the multichannel ANC system.
 - `Four_MCANC.m`: Main program for testing the McFxLMS algorithm.
+- `\path`: Contain the measured primary paths and secondary paths.
 
 ### Functions and Their Use
 - `Multichannel_FxLMS.m`
