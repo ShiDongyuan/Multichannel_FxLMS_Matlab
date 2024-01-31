@@ -9,7 +9,8 @@ Active noise control (ANC) is a mechanism used to address low-frequency noise is
 
 -In general, the ANC system can be classified as feedforward structure and feedback structure. The feedforward structure implements the reference microphone and the error microphone to generate anti-noise that can dynamically match with the variation of the primary noise, which allows it to deal with many noise types. Moreover, the ANC system also can be referred to as single-channel ANC~\cite{shi2016systolic} or multichannel ANC based on the number of secondary sources used. Compared to single-channel ANC, multichannel ANC is implemented to gain a larger quiet zone through multiple secondary sources and error microphones. 
 
--The FxLMS is among the most practical adaptive algorithms proposed to compensate for the influence of the secondary path in an ANC system. Figure 1 shows the block diagram of the multichannel FxLMS algorithm, which has $J$ reference microphones, $K$ secondary sources, and $M$ error microphones. The control filter matrix is given by
+-The FxLMS is among the most practical adaptive algorithms proposed to compensate for the influence of the secondary path in an ANC system. Figure 1 shows the block diagram of the multichannel FxLMS algorithm, which has $J$ reference microphones, $K$ secondary sources, and $M$ error microphones. The control filter matrix is given by  
+
 $$
 \begin{eqnarray}
 f(x) = a_nx^n \\
