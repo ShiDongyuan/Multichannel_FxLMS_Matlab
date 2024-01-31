@@ -14,11 +14,13 @@ This document explains the implementation of the Multichannel Filtered Reference
 - `Four_MCANC.m`: Main program for testing the McFxLMS algorithm.
 
 ### Functions and Their Use
+- `Multichannel_FxLMS.m`
 - Initialization functions for setting system properties.
 - Functions for generating anti-noise signals and updating filter coefficients.
 - Methods for retrieving control filter coefficients.
 
 ## Testing and Simulation
+- `Four_MCANC.m`
 - Examples include simulations of a 4-channel collocated ANC system.
 - Instructions for setting up primary and secondary paths, generating reference and disturbance signals.
 
