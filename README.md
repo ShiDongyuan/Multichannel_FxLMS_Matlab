@@ -12,12 +12,11 @@ Active noise control (ANC) is a mechanism used to address low-frequency noise is
 -The FxLMS is among the most practical adaptive algorithms proposed to compensate for the influence of the secondary path in an ANC system. Figure 1 shows the block diagram of the multichannel FxLMS algorithm, which has $J$ reference microphones, $K$ secondary sources, and $M$ error microphones. The control filter matrix is given by  
 
 $$
-    \mathbf w(n) = \begin{bmatrix}
-        \mathbf{w}_{11}^T(n) & \mathbf{w}_{12}^T(n) & \cdots & \mathbf{w}_{1J}^T(n) \\
-        \mathbf{w}_{21}^T(n) & \mathbf{w}_{22}^T(n) & \cdots & \mathbf{w}_{2J}^T(n) \\
-        \vdots & \vdots & \ddots & \vdots \\
-        \mathbf{w}_{K1}^T(n) & \mathbf{w}_{K2}^T(n) & \cdots & \mathbf{w}_{KJ}^T(n)
-    \end{bmatrix} \in \mathbb{R}^{K \times JN},
+\begin{pmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i 
+\end{pmatrix} 
 $$
 
 - The document covers the principles and effectiveness of active noise control, emphasizing the algorithm's role.
