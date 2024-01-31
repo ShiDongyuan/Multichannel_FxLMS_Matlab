@@ -18,9 +18,9 @@ Active noise control (ANC) is a mechanism used to address low-frequency noise is
 
 ### Functions and Their Use
 - `Multichannel_FxLMS.m`
-- Initialization functions for setting system properties.
-- Functions for generating anti-noise signals and updating filter coefficients.
-- Methods for retrieving control filter coefficients.
+- `Multichannel_FxLMS()` Initialization functions for setting system properties.
+- `FxLMS_cannceller()` Functions for generating anti-noise signals and updating filter coefficients.
+- `Get_coefficients()` Methods for retrieving control filter coefficients.
 
 ## Testing and Simulation
 - `Four_MCANC.m`
