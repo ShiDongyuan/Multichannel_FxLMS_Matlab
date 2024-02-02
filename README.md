@@ -11,9 +11,7 @@ Active noise control (ANC) is a mechanism used to address low-frequency noise is
 
 - The target multichannel active noise control (MCANC) system is assumed to have $J$ reference microphones, $K$ secondary sources, and $M$ error microphones. According to the gradient decent method, the $kj$th control filter is obtained from 
 
-  $$
-      \mathbf{w}_{kj}(n + 1) = \mathbf{w}_{kj}(n) + \mu \sum_{m=1}^{M} e_m(n) \mathbf{x}'_{jkm}(n),
-  $$
+  $$\mathbf{w}_{kj}(n + 1) = \mathbf{w}_{kj}(n) + \mu \sum_{m=1}^{M} e_m(n) \mathbf{x}'_{jkm}(n),$$
   
   where $\mu$ and $e_m$ denote the step size and the $m$-th error signal respectively. The filtered reference signal is given by 
   $$ x_{jkm}'(n) = \hat{s}_{mk}(n) * x_j(n).$$
