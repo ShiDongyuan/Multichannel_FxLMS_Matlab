@@ -48,3 +48,13 @@ Active noise control (ANC) is a mechanism used to address low-frequency noise is
 
 ## Conclusion
 The guide provides a detailed overview of creating and using a MATLAB program for active noise control using the McFxLMS algorithm.
+
+## Reference 
+``` bibtex
+@article{shi2020algorithms,
+  title={Algorithms and implementations to overcome practical issues in active noise control systems},
+  author={Shi, Dongyuan},
+  year={2020},
+  publisher={Nanyang Technological University}
+}
+```
