@@ -9,9 +9,7 @@ Active noise control (ANC) is a mechanism used to address low-frequency noise is
 
 - In general, the ANC system can be classified as feedforward structure and feedback structure. The feedforward structure implements the reference microphone and the error microphone to generate anti-noise that can dynamically match with the variation of the primary noise, which allows it to deal with many noise types. Moreover, the ANC system also can be referred to as single-channel ANC or multichannel ANC based on the number of secondary sources used. Compared to single-channel ANC, multichannel ANC is implemented to gain a larger quiet zone through multiple secondary sources and error microphones.
 
-- The target multichannel active noise control (MCANC) system is assumed to have $J$ reference microphones, $K$ secondary sources, and $M$ error microphones. According to the gradient decent method, the $kj$ th control filter is obtained from 
-
-  $$\mathbf{w}_{kj}(n + 1)=\mathbf{w}_{kj}(n)+\mu\sum_{m=1}^{M} e_m(n) \mathbf{x}'_{jkm}(n),$$
+- The target multichannel active noise control (MCANC) system is assumed to have $J$ reference microphones, $K$ secondary sources, and $M$ error microphones. According to the gradient decent method, the $kj$ th control filter is obtained from $$\mathbf{w}_{kj}(n + 1)=\mathbf{w}_{kj}(n)+\mu\sum_{m=1}^{M} e_m(n) \mathbf{x}'_{jkm}(n),$$
   
   where $\mu$ and $e_m$ denote the step size and the $m$-th error signal respectively. The filtered reference signal is given by 
   $$ x_{jkm}'(n) = \hat{s}_{mk}(n) * x_j(n).$$
