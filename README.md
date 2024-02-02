@@ -13,8 +13,8 @@ Active noise control (ANC) is a mechanism used to address low-frequency noise is
   $$\mathbf{w}\_{kj}(n + 1)=\mathbf{w}\_{kj}(n)+\mu\sum\_{m=1}^{M} e_m(n) \mathbf{x}'\_{jkm}(n),$$
   
   where $\mu$ and $e_m$ denote the step size and the $m$-th error signal respectively. The filtered reference signal is given by 
-  $$ x_{jkm}'(n) = \hat{s}_{mk}(n) * x_j(n).$$
-  In the equation, $\hat{s}_{mk}(n)$ represents the impulse response of the $mk$-th secondary path, and $x_j(n)$ is the reference signal picked by the $j$-th reference microphone. This Matlab Code is used to implement the above algorithm.  
+  $$ x\_{jkm}'(n) = \hat{s}\_{mk}(n) * x\_j(n).$$
+  In the equation, $\hat{s}\_{mk}(n)$ represents the impulse response of the $mk$-th secondary path, and $x\_j(n)$ is the reference signal picked by the $j$-th reference microphone. This Matlab Code is used to implement the above algorithm.  
 
 
 ## Code Explanation
