@@ -20,20 +20,20 @@ Active noise control (ANC) is a mechanism used to address low-frequency noise is
 
 ## Code Explanation
 ### Key MATLAB Files
-- `Control_filter.m`: Defines a class for the control filter of the ANC system.
-- `Multichannel_FxLMS.m`: Specifies properties and functions of the multichannel ANC system.
-- `Four_MCANC.m`: Main program for testing the McFxLMS algorithm.
-- `\path`: Contain the measured primary paths and secondary paths.
+- [`Four_MCANC.m`](#testing-and-simulation): Main program for testing the McFxLMS algorithm.
+- [`Multichannel_FxLMS.m`](#the-explanation-of-multichannel_fxlmsm): The code of the multichannel filterd reference least mean sqaure (McFxLMS) algorithm.
+- `Control_filter.m`: The code of the control filter in the adaptive algorithm.
+- `\path`: The data folder that ontains the measured primary paths and secondary paths.
 
-### Functions and Their Use
-- `Multichannel_FxLMS.m`
-- `Multichannel_FxLMS()` Initialization functions for setting system properties.
-- `FxLMS_cannceller()` Functions for generating anti-noise signals and updating filter coefficients.
-- `Get_coefficients()` Methods for retrieving control filter coefficients.
+---
+### The explanation of `Multichannel_FxLMS.m` 
+ `Multichannel_FxLMS.m` realizes the McFxLMS algorithm with arbitrary channels. It has following functions: 
+- `Multichannel_FxLMS()`: Initialization functions for setting system properties.
+- `FxLMS_cannceller()`: Functions for generating anti-noise signals and updating filter coefficients.
+- `Get_coefficients()`: Methods for retrieving control filter coefficients.
 
 ## Testing and Simulation
-- `Four_MCANC.m`
-- Examples include simulations of a 4-channel collocated ANC system.
+- `Four_MCANC.m` provides an example of using the code of the McFxLMS algorithm.
 - Instructions for setting up primary and secondary paths, generating reference and disturbance signals.
 - The following code segment shows a simple example of the usage of the McFxLMS code. 
   ```matlab
