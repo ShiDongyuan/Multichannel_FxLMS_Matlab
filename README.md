@@ -36,6 +36,13 @@ Active noise control (ANC) is a mechanism used to address low-frequency noise is
 - `Four_MCANC.m` provides an example of using the code of the McFxLMS algorithm.
 - Instructions for setting up primary and secondary paths, generating reference and disturbance signals.
 - The following code segment shows a simple example of the usage of the McFxLMS code. 
+
+| Parameter | Definition                        | Parameter | Definition                                  |
+|-----------|-----------------------------------|-----------|---------------------------------------------|
+| Wc        | Control filter Matrix [Lc xK x J] | Sec       | Secondary path estimate Matrix [Ls x M x K] |
+| muW       | Step size                         | Red       | Reference signal Matrix [J x N]             |
+| Dir       | Disturbance Matrix [M x N]        |           |                                             |
+
   ```matlab
   %% Multichannel FxLMS algorithm 
   %---Wc [Filter length x Control unit/ microphone x Reference microphone number]
